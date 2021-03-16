@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content= "width =device-width, inintial-scale =1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Welcome OnBoard Users!</h1>
+        <section>
+            <% for (let item of data) { %>
+
+                <ul>
+
+                <li><% if (item.age == undefined && item.name != undefined) { %>
+
+                    <p style="color:rgb(0, 92, 128); font-weight: bold;"><%= item.name %> who likes doing <%= item.hobbies[0] %> and <%= item.hobbies[1] %> </p>
+                    
+                
+                <% } else if (item.hobbies == undefined && item.name !=undefined ) { %> 
+
+                    <p style="color:rgb(57, 110, 209); font-weight: bold;"> <%= item.name %> of age <%=item.age %>  </p>
+
+
+                    
+
+                <% } else if (item.name == undefined ) { %>
+
+                    <p style ="color:red;">Bad Data</p>
+                    
+                
+
+                <% } else { %>
+
+                    <p style="color:Green; font-weight: bold;"> <%= item.name %> of age <%=item.age %> who likes doing <%= item.hobbies[0] %> and <%= item.hobbies[1] %> </p>
+
+                <% } %>
+
+
+                
+                
+                </li>
+                </ul>
+
+            <% } %>
+        </section>
+    </body>
+</html>
