@@ -15,12 +15,12 @@
 
                 <li><% if (item.age == undefined && item.name != undefined) { %>
 
-                    <p style="color:rgb(0, 92, 128); font-weight: bold;"><%= item.name %> who likes doing <%= item.hobbies[0] %> and <%= item.hobbies[1] %> </p>
+                    <p style="color:rgb(0, 92, 128); font-weight: bold;"><%= item.name %> who likes doing <%= item.hobbies[0] %> and <%= item.hobbies[1] %> but "Age Missing" </p>
                     
                 
                 <% } else if (item.hobbies == undefined && item.name !=undefined ) { %> 
 
-                    <p style="color:rgb(57, 110, 209); font-weight: bold;"> <%= item.name %> of age <%=item.age %>  </p>
+                    <p style="color:rgb(57, 110, 209); font-weight: bold;"> <%= item.name %> of age <%=item.age %> but "Hobbies Missing  </p>
 
 
                     
